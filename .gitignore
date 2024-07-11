@@ -41,3 +41,4 @@ archive/output_csvs/
 archive/save_train_images.ipynb
 # Ignore system files
 .DS_Store
+archive/Saved Weights

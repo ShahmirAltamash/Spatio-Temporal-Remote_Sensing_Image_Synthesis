@@ -93,8 +93,8 @@ def main():
     generator= Generator(in_channels=4).to(config.DEVICE)
     segmentation= UNet().to(config.DEVICE)
 
-    gen_path =  "Saved Models/gen_best_val.pth.tar"
-    gen2_path = "Saved Models/att_gen_best_epoch_77.pth.tar"
+    gen_path =  "Saved Weights/gen_best_val.pth.tar"
+    gen2_path = "Saved Weights/att_gen_best_epoch_77.pth.tar"
     generator = utils.load_model_raw(gen_path)
     generator2 = utils.load_model_raw(gen2_path)
     segmentation= utils.load_model_raw(config.CHECKPOINT_SEG)
