@@ -1,0 +1,43 @@
+# Ignore runs and history directories inside archive
+archive/runs/
+archive/Loss\ History/
+
+# Ignore image files inside archive
+archive/*.png
+
+# Ignore numpy files inside archive
+archive/*.npy
+
+
+# Ignore all csv files inside archive
+*.csv
+
+*.pt
+
+# Ignore specific directories and files inside archive
+archive/sample_path1/
+archive/sample_path2/
+archive/Saved\ Models/
+archive/Segmentation\ Models/
+archive/SN7_buildings_test_public/
+archive/SN7_buildings_train/
+archive/SN7_buildings_train_csvs/
+archive/SN7_buildings_train_sample/
+archive/SN7_generated_test_images/
+archive/SN7_gts/
+archive/SN7_seg_masks/
+archive/val_trial/
+archive/Att_Gen_train_images/
+archive/Att_Gen_train_images_best/
+archive/Att_Gen_train_images_trial/
+archive/Evaluation/
+archive/Generated\ Images/
+archive/metric_tester.ipynb
+archive/output_csvs.zip
+archive/Dataset_updated.ipynb
+archive/pytorch-fid/
+archive/ControlNet/
+archive/output_csvs/
+archive/save_train_images.ipynb
+# Ignore system files
+.DS_Store
