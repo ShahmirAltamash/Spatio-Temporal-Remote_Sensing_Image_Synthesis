@@ -16,6 +16,7 @@ from cleanfid import fid
 from cleanfid.features import build_feature_extractor
 from torchvision.utils import save_image
 
+
 def extract(data):
 
     indices= torch.nonzero(data).flatten()
@@ -122,20 +123,7 @@ def main():
     print( "LPIPS Attention UNet Generator", avg(lpips_r),  "SSIM Attention UNet Generator", avg(ssim_r), "PSNRAttention UNet Generator", avg(psnr_r))
    
 
-    
-    # columns = ('LPIPS Attention UNet Generator', ' LPIPS UNet Generator' , 'SSIM Attention UNet Generator' , ' SSIM UNet Generator', 'PSNR Attention UNet Generator' , ' PSNR UNet Generator')
-    # rows = ['values']
-    # data = [[avg(lpips_r) , avg(lpips_s) , avg(ssim_r) , avg(ssim_s),avg(psnr_r), avg(psnr_s)]]
-    # fig , ax = plt.subplots()
-    # ax.axis('tight')
-    # ax.axis('off')
-    # ax.table(cellText=data, colLabels=columns, rowLabels=rows, loc='center')
-    # plt.show()
-
-    # # fid_score = fid.compute_fid(real_path, fake_path, mode="clean", verbose=True, num_workers=0)
-
-    # print(data)
-
+  
     
 
 if __name__ == "__main__":
