@@ -3,6 +3,8 @@
 ## Introduction
 This repository contains a PyTorch-based pipeline for training, testing, and evaluating image generation models, specifically using GANs (Generative Adversarial Networks). The models are designed to generate and process high-resolution satellite images. The repository includes various utilities, configurations, and metrics necessary for model evaluation and checkpoint management.
 
+![Diagram](Motivation.png)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
