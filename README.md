@@ -1,13 +1,16 @@
 # Spatio-Temporal Remote Sensing Image Synthesis
 
 ## Introduction
-This repository contains a PyTorch-based pipeline for training, testing, and evaluating image generation models, specifically using GANs (Generative Adversarial Networks). The models are designed to generate and process high-resolution satellite images. The repository includes various utilities, configurations, and metrics necessary for model evaluation and checkpoint management.
+The Spatio-Temporal Remote Sensing Image Synthesis project leverages cGANs and diffusion models to generate high-resolution satellite images. This pipeline enables precise and realistic image generation for various applications, including urban planning and environmental monitoring. By integrating guidance types such as semantic masks or text prompts, the models produce future time-series imagery based on past data inputs, maintaining high fidelity and semantic accuracy.
 
-![Diagram](Motivation.png)
+<div align="center">
+  <img src="Motivation.png" alt="Diagram">
+</div>
+
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
+- [Repositry](#Repositry)
   - [Training](#training)
   - [Testing](#testing)
   - [Utilities](#utilities)
@@ -29,17 +32,63 @@ This repository contains a PyTorch-based pipeline for training, testing, and eva
    pip install -r requirements.txt
    ```
 
-## Usage
+## Repository
+
+The repository is organized into three main folders, each dedicated to a specific aspect of the image synthesis pipeline:
+
+#### 1. ControlNet Folder
+
+This folder contains scripts for working with ControlNet, including:
+
+- Data preprocessing to prepare inputs for ControlNet training
+- ControlNet model training scripts
+- Image generation utilities using trained ControlNet models
+
+#### 2. cGAN Folder
+
+This section houses implementations for conditional Generative Adversarial Networks (cGANs), including:
+
+- Vanilla cGAN scripts
+- Attention cGAN implementations
+- Training routines for cGAN models
+- Testing and evaluation scripts
+- Image generation tools using trained cGAN models
+
+#### 3. Dataset Folder
+
+This folder focuses on dataset preparation, particularly for cGAN training:
+
+- Scripts for processing and formatting raw data
+- Utilities to organize data into the required structure for cGAN training
+
+## Models
+The `models.py` file contains architectures for discriminator and generators for GAN and Attention cGAN.
+
+#### Discriminator
+The Discriminator model is defined in `models.py` and consists of convolutional layers to classify real and generated images.
+
+#### Generator
+The Generator model is also defined in `models.py` and is responsible for generating images from input noise.
+
+#### UNet
+The UNet model is used as the generator. It can also be used for segmentation tasks and is defined in `models.py`.
+
+#### Attention UNet
+An enhanced version of the UNet with attention mechanisms to focus on important regions of the image.
 
 ### Training
 
-To train the models, use the `train.py` script:
+To train the cGAN model, use the `train.py` script:
 
    ```bash
    python train.py
   ```
 
-This script initializes the models, loads the dataset, and starts the training process. It also saves the model checkpoints and logs the training progress.
+This script initializes the models, loads the dataset, and starts training. It also saves the model checkpoints and logs the training progress.
+This is only for the cGAN model. For the Attention can use `train_att_gen.py`
+```
+python train_att_gen.py
+```
 
 ### Testing
 
@@ -64,18 +113,6 @@ All the configurations for the training and testing process are located in the `
 - `LOAD_MODEL`: Flag to load a pre-trained model.
 - `SAVE_MODEL`: Flag to save the model during training.
 
-## Models
-### Discriminator
-The Discriminator model is defined in `models.py` and consists of convolutional layers to classify real and generated images.
-
-### Generator
-The Generator model is also defined in `models.py` and is responsible for generating images from input noise.
-
-### UNet
-The UNet model is used for segmentation tasks and is defined in `models.py`.
-
-### Attention UNet
-An enhanced version of the UNet with attention mechanisms to focus on important regions of the image.
 
 ## Metrics
 Metrics for model evaluation are implemented in `metrics.py`. These include:
