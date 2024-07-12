@@ -17,13 +17,13 @@ This repository contains a PyTorch-based pipeline for training, testing, and eva
 ## Installation
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/ShahmirAltamash/Spatio-Temporal-Remote_Sensing_Image_Synthesis.git
    cd Spatio-Temporal-Remote_Sensing_Image_Synthesis
-  ```
+
 
 2. Install the required dependencies:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
