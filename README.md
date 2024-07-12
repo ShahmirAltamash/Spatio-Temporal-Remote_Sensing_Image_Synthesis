@@ -90,6 +90,16 @@ This is only for the cGAN model. For the Attention can use `train_att_gen.py`
 python train_att_gen.py
 ```
 
+## Metrics
+Metrics for model evaluation are implemented in `metrics.py`. These include:
+
+- LPIPS: Learned Perceptual Image Patch Similarity
+- SSIM: Structural Similarity Index
+- PSNR: Peak Signal-to-Noise Ratio
+- FID: Frechet Inception Distance 
+- F1 Score
+
+
 ### Testing
 
 To test the models, use the `test.py` script:
@@ -98,7 +108,8 @@ To test the models, use the `test.py` script:
    python test.py
    ```
 
-This script loads the trained models and evaluates them on the test dataset, computing various metrics and optionally saving generated images.
+This script loads the trained models and evaluates them on the test dataset, computing the above described metrics and optionally saving generated images.
+For FID calculation use the `compute_fid.ipynb` file. To run this code you must have generated pictures from the both the models inside different zip folders and then give the path to the directies in the code.
 
 ## Utilities
 Utility functions are provided in `utils.py`, which include functions for saving/loading checkpoints, saving model outputs, and more.
@@ -113,14 +124,6 @@ All the configurations for the training and testing process are located in the `
 - `LOAD_MODEL`: Flag to load a pre-trained model.
 - `SAVE_MODEL`: Flag to save the model during training.
 
-
-## Metrics
-Metrics for model evaluation are implemented in `metrics.py`. These include:
-
-- LPIPS: Learned Perceptual Image Patch Similarity
-- SSIM: Structural Similarity Index
-- PSNR: Peak Signal-to-Noise Ratio
-- F1 Score
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
