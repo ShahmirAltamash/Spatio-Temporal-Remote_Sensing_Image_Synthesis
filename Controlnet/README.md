@@ -42,11 +42,11 @@ The `test.ipynb` file demonstrates how to use the trained model to generate your
 
 There are two versions of Stable Diffusion that can be used as a backbone:
 
-![Stable Diffusion Versions](images/stable_diffusion_versions.jpeg)
+![Stable Diffusion Versions](images/readme1.jpeg)
 
 `base_model_path` refers to a vanilla version of Stable Diffusion 1.5 whereas `remote_sensing_model` refers to a version of it that has been finetuned for remote sensing applications. You may choose either one of these for your experiments. To choose the vanilla version, simply replace `remote_sensing_model` with `base_model_path` in the next code cell:
 
-![Code Cell Example](images/code_cell_example.jpeg)
+![Code Cell Example](images/readme2.jpeg)
 
 **Note**: Running this model requires approximately 5-10 GB to download all necessary weights for the pipeline.
 
