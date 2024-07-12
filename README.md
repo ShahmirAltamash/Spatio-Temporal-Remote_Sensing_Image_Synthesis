@@ -1,7 +1,7 @@
 # Spatio-Temporal Remote Sensing Image Synthesis
 
 ## Introduction
-This repository contains a PyTorch-based pipeline for training, testing, and evaluating image generation models, specifically using GANs (Generative Adversarial Networks) and UNets. The models are designed to generate and process high-resolution satellite images. The repository includes various utilities, configurations, and metrics necessary for model evaluation and checkpoint management.
+This repository contains a PyTorch-based pipeline for training, testing, and evaluating image generation models, specifically using GANs (Generative Adversarial Networks). The models are designed to generate and process high-resolution satellite images. The repository includes various utilities, configurations, and metrics necessary for model evaluation and checkpoint management.
 
 ## Table of Contents
 - [Installation](#installation)
