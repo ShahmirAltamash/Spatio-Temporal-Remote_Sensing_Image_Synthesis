@@ -21,6 +21,58 @@ This repository contains a PyTorch-based pipeline for training, testing, and eva
    git clone https://github.com/ShahmirAltamash/Spatio-Temporal-Remote_Sensing_Image_Synthesis.git
    cd Spatio-Temporal-Remote_Sensing_Image_Synthesis
 
-2. Install the requied dependencies:
+2. Install the required dependencies:
  ```
   pip install -r requirements.txt
+ ```
+3. To train the models, use the `train.py` script:
+ ```
+  python train.py
+
+ ```
+This script initializes the models, loads the dataset, and starts the training process. It also saves the model checkpoints and logs the training progress.
+
+4. To test the models, use the `test.py` script:
+ ```
+  python test.py
+
+ ```
+This script loads the trained models and evaluates them on the test dataset, computing various metrics and optionally saving generated images.
+
+##Utilities
+Utility functions are provided in utils.py, which include functions for saving/loading checkpoints, saving model outputs, and more.
+
+##Configuration
+All the configurations for the training and testing process are located in the config.py file. Here are some key configurations:
+
+DEVICE: Device to run the computations (cuda or cpu).
+LEARNING_RATE: Learning rate for the optimizer.
+BATCH_SIZE: Batch size for data loaders.
+NUM_EPOCHS: Number of training epochs.
+LOAD_MODEL: Flag to load a pre-trained model.
+SAVE_MODEL: Flag to save the model during training.
+
+##Models
+#Discriminator
+The Discriminator model is defined in models.py and consists of convolutional layers to classify real and generated images.
+
+##Generator
+#The Generator model is also defined in models.py and is responsible for generating images from input noise.
+
+##UNet
+#The UNet model is used for segmentation tasks and is defined in models.py.
+
+##Attention UNet
+#An enhanced version of the UNet with attention mechanisms to focus on important regions of the image.
+
+##Metrics
+#Metrics for model evaluation are implemented in metrics.py. These include:
+
+#LPIPS: Learned Perceptual Image Patch Similarity
+#SSIM: Structural Similarity Index
+#PSNR: Peak Signal-to-Noise Ratio
+#F1 Score
+
+##License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
