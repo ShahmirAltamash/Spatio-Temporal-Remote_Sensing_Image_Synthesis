@@ -20,12 +20,12 @@ This repository contains a PyTorch-based pipeline for training, testing, and eva
    ```bash
    git clone https://github.com/ShahmirAltamash/Spatio-Temporal-Remote_Sensing_Image_Synthesis.git
    cd Spatio-Temporal-Remote_Sensing_Image_Synthesis
-   \`\`\`
+  ```
 
 2. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 ## Usage
 
@@ -85,4 +85,3 @@ Metrics for model evaluation are implemented in `metrics.py`. These include:
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
-"""
