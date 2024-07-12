@@ -43,40 +43,40 @@ This script initializes the models, loads the dataset, and starts the training p
 
 To test the models, use the `test.py` script:
 
-   \`\`\`bash
+   ```bash
    python test.py
-   \`\`\`
+   ```
 
 This script loads the trained models and evaluates them on the test dataset, computing various metrics and optionally saving generated images.
 
 ## Utilities
-Utility functions are provided in \`utils.py\`, which include functions for saving/loading checkpoints, saving model outputs, and more.
+Utility functions are provided in `utils.py`, which include functions for saving/loading checkpoints, saving model outputs, and more.
 
 ## Configuration
-All the configurations for the training and testing process are located in the \`config.py\` file. Here are some key configurations:
+All the configurations for the training and testing process are located in the `config.py` file. Here are some key configurations:
 
-- \`DEVICE\`: Device to run the computations (\`cuda\` or \`cpu\`).
-- \`LEARNING_RATE\`: Learning rate for the optimizer.
-- \`BATCH_SIZE\`: Batch size for data loaders.
-- \`NUM_EPOCHS\`: Number of training epochs.
-- \`LOAD_MODEL\`: Flag to load a pre-trained model.
-- \`SAVE_MODEL\`: Flag to save the model during training.
+- `DEVICE`: Device to run the computations (\`cuda\` or \`cpu\`).
+- `LEARNING_RATE`: Learning rate for the optimizer.
+- `BATCH_SIZE`: Batch size for data loaders.
+- `NUM_EPOCHS`: Number of training epochs.
+- `LOAD_MODEL`: Flag to load a pre-trained model.
+- `SAVE_MODEL`: Flag to save the model during training.
 
 ## Models
 ### Discriminator
-The Discriminator model is defined in \`models.py\` and consists of convolutional layers to classify real and generated images.
+The Discriminator model is defined in `models.py` and consists of convolutional layers to classify real and generated images.
 
 ### Generator
-The Generator model is also defined in \`models.py\` and is responsible for generating images from input noise.
+The Generator model is also defined in `models.py` and is responsible for generating images from input noise.
 
 ### UNet
-The UNet model is used for segmentation tasks and is defined in \`models.py\`.
+The UNet model is used for segmentation tasks and is defined in `models.py`.
 
 ### Attention UNet
 An enhanced version of the UNet with attention mechanisms to focus on important regions of the image.
 
 ## Metrics
-Metrics for model evaluation are implemented in \`metrics.py\`. These include:
+Metrics for model evaluation are implemented in `metrics.py`. These include:
 
 - LPIPS: Learned Perceptual Image Patch Similarity
 - SSIM: Structural Similarity Index
