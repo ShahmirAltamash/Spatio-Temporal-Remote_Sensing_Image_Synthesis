@@ -58,7 +58,11 @@ This section houses implementations for conditional Generative Adversarial Netwo
 
 This folder focuses on dataset preparation, particularly for cGAN training:
 
-- Scripts for processing and formatting raw data
+- Download the dataset from this [link]( https://www.kaggle.com/datasets/amerii/spacenet-7-multitemporal-urban-development) 
+- Scripts for processing and formatting raw data.
+- The `spacenet-7-directory-metadata-extraction.ipynb` uses these downlaoded folders adn converts them into `.csv` format
+- `spacenet-7-helper-functions.ipynb` only contains helper functions that we have used in the main code. Explore how the data is manipulated to get a better understanding.
+- Use `dataset.py` to crease custom pytorch dataset classses for model. The SpaceNetDataset class returns concatenated intial image and segmentation mask, groundtruth of the future date and the index tensor.
 - Utilities to organize data into the required structure for cGAN training
 
 ## Models
