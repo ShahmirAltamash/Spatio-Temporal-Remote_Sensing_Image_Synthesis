@@ -50,6 +50,12 @@ There are two versions of Stable Diffusion that can be used as a backbone:
 
 **Note**: Running this model requires approximately 5-10 GB to download all necessary weights for the pipeline.
 
+## Using Pretrained Model Weights
+**Note**: These weights may or may not work.
+
+In order to use the weights from the model we original trained, you may download the directory provided at this link: https://drive.google.com/file/d/1DemMD1hYCP3LTkCymTHY-D-26M-w82qM/view?usp=sharing
+Download the zip file and extract the folder `Final Model` to your system and in the `test.ipynb` file, set the variable `controlnet_path` to the path of the folder containing the weights.  
+
 ## Additional Information
 
 For more detailed information or if you encounter any issues, please refer to the original ControlNet documentation or open an issue in this repository.
